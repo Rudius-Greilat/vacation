@@ -19,6 +19,7 @@ python3 -m http.server 8000
 - `index.html`：总站时间线首页
 - `assets/trips.js`：总站卡片数据与独立页面入口
 - `trips/jiangnan-2026/`：江南旅行计划独立页面
+- `trips/zhanjiang-2026/`：湛江三日旅行计划独立页面
 - `trips/yunnan-2026/`：昆明、丽江、长沙旅行计划独立页面
 
 ## 添加旅行计划
