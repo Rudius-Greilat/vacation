@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="按时间收藏公开旅行计划，浏览江南、云南等目的地的路线、景点与实用建议。">
+  <meta name="theme-color" content="#173b36">
+  <title>远行簿 · 旅行计划时间线</title>
+  <link rel="stylesheet" href="./assets/site.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="返回首页">
+      <span class="brand-mark">远</span>
+      <span>远行簿</span>
+    </a>
+    <nav class="site-nav" aria-label="主导航">
+      <a href="#timeline">旅行计划</a>
+      <a href="#about">关于本站</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="home-hero">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">TRAVEL NOTES · 2026</p>
+        <h1>把想去的地方，<br>放进时间里。</h1>
+        <p class="hero-lead">一份持续生长的旅行计划集。沿时间线浏览每段旅程，再进入详情查看每日路线、住宿区域、美食与出发前提示。</p>
+        <a class="button button-primary" href="#timeline">查看计划</a>
+      </div>
+      <div class="hero-orbit" aria-hidden="true">
+        <div class="orbit-ring orbit-one"></div>
+        <div class="orbit-ring orbit-two"></div>
+        <div class="orbit-card orbit-card-a"><span>01</span><strong>江南</strong><small>园林与水巷</small></div>
+        <div class="orbit-card orbit-card-b"><span>02</span><strong>云南</strong><small>湖泊与雪山</small></div>
+        <div class="orbit-center">出发</div>
+      </div>
+    </section>
+
+    <section class="section timeline-section" id="timeline">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">THE JOURNEYS</p>
+          <h2>旅行时间线</h2>
+        </div>
+        <p>按出发时间排列。每一站都保留足够的弹性，不把旅行变成赶路。</p>
+      </div>
+      <div class="year-filter reveal" id="year-filter" aria-label="按年份筛选"></div>
+      <div class="trip-timeline" id="trip-timeline" aria-live="polite"></div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="about-card reveal">
+        <p class="eyebrow">ABOUT THIS PLACE</p>
+        <h2>公开、轻量，也方便继续增加下一段旅程。</h2>
+        <p>本站只整理适合公开分享的路线、景点、交通方式、住宿区域、美食和通用提示。票价、开放时间与交通班次可能变化，出发前请以官方信息为准。</p>
+        <div class="about-stats">
+          <div><strong id="trip-count">0</strong><span>份计划</span></div>
+          <div><strong id="city-count">0</strong><span>座城市</span></div>
+          <div><strong>100%</strong><span>纯静态</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>远行簿 · 认真计划，也允许随时改变计划。</p>
+    <p>内容仅供旅行参考。</p>
+  </footer>
+
+  <script type="module" src="./assets/home.js"></script>
+</body>
+</html>

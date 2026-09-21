@@ -1,0 +1,14 @@
+.DS_Store
+node_modules/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.log
+.with/
+.meta.json
+.version.txt
+qbfdkqrq_af0c1558ef70f6fff7e14c14acd9bf312efe01f0/
+sgd4k44k_5e964e0c79a665e37c3e3600214f38c7ca05accc/
