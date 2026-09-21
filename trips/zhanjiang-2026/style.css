@@ -19,15 +19,13 @@ body { margin: 0; color: var(--ink); background: var(--paper); font-family: Inte
 a { color: inherit; }
 .skip-link { position: fixed; left: 1rem; top: -5rem; z-index: 100; padding: .8rem 1rem; border-radius: 999px; background: white; }
 .skip-link:focus { top: 1rem; }
-.site-header { position: sticky; top: 0; z-index: 40; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; min-height: 68px; padding: .75rem max(5vw, 1.25rem); border-bottom: 1px solid rgba(255,255,255,.1); color: white; background: rgba(5,47,61,.92); backdrop-filter: blur(18px); }
-.brand { display: inline-flex; align-items: center; gap: .7rem; text-decoration: none; font-weight: 800; letter-spacing: .08em; }
-.brand-mark { display: grid; width: 38px; height: 38px; place-items: center; border: 1px solid rgba(255,255,255,.45); border-radius: 50%; font-size: .7rem; }
+.site-header { position: sticky; top: 0; z-index: 40; display: flex; width: 100%; max-width: none; min-height: 52px; margin: 0; padding: .45rem max(4vw, 1.25rem); align-items: center; justify-content: space-between; gap: 1.5rem; border-bottom: 1px solid rgba(255,255,255,.1); color: white; background: rgba(5,47,61,.94); backdrop-filter: blur(18px); }
 .site-header nav { display: flex; gap: 1.5rem; }
-.site-header nav a, .back-link { color: rgba(255,255,255,.76); text-decoration: none; font-size: .88rem; }
+.site-header nav a, .back-link { color: rgba(255,255,255,.76); text-decoration: none; font-size: .82rem; }
 .site-header a:hover { color: white; }
-.back-link { padding: .65rem 1rem; border: 1px solid rgba(255,255,255,.2); border-radius: 999px; }
+.back-link { display: inline-flex; margin: 0; padding: .42rem .75rem; align-items: center; gap: .45rem; border: 1px solid rgba(255,255,255,.2); border-radius: 999px; white-space: nowrap; }
 
-.hero { position: relative; min-height: calc(100vh - 68px); display: flex; align-items: end; overflow: hidden; color: white; background: var(--deep); }
+.hero { position: relative; min-height: calc(100vh - 52px); display: flex; align-items: end; overflow: hidden; color: white; background: var(--deep); }
 .hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .hero-shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(2,35,46,.94) 0%, rgba(2,35,46,.68) 48%, rgba(2,35,46,.1) 80%), linear-gradient(0deg, rgba(2,35,46,.7), transparent 55%); }
 .hero-content { position: relative; z-index: 1; width: min(1160px, 90vw); margin: 0 auto; padding: 8rem 0 7rem; }
@@ -82,6 +80,20 @@ a { color: inherit; }
 .weather-card span { color: var(--sun); font-size: .72rem; font-weight: 900; letter-spacing: .12em; }
 .weather-card p { margin: .6rem 0 0; color: rgba(255,255,255,.72); font-size: .82rem; line-height: 1.65; }
 
+.alternatives-section { width: min(1280px, 92vw); }
+.alternative-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
+.alternative-card { overflow: hidden; border: 1px solid var(--line); border-radius: 28px; background: white; box-shadow: 0 14px 44px rgba(7,59,76,.08); }
+.alternative-card figure { position: relative; height: 250px; margin: 0; overflow: hidden; background: var(--foam); }
+.alternative-card img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+.alternative-card:hover img { transform: scale(1.035); }
+.alternative-card figcaption { position: absolute; right: .8rem; bottom: .8rem; padding: .35rem .6rem; border-radius: 999px; color: white; background: rgba(5,47,61,.72); font-size: .66rem; backdrop-filter: blur(8px); }
+.alternative-copy { padding: 1.6rem 1.7rem 1.8rem; }
+.alternative-meta { display: flex; align-items: center; justify-content: space-between; gap: .75rem; color: var(--sea); font-size: .72rem; font-weight: 800; letter-spacing: .04em; }
+.alternative-meta b { padding: .3rem .55rem; border-radius: 999px; color: #8c452f; background: #fbe6dd; font-size: .66rem; }
+.alternative-card h3 { margin: .8rem 0 .65rem; font: 500 1.55rem Georgia, "Songti SC", serif; }
+.alternative-card p { margin: 0; color: rgba(7,59,76,.66); line-height: 1.75; }
+.photo-credit { margin: 1.2rem 0 0; color: rgba(7,59,76,.5); font-size: .72rem; line-height: 1.7; }
+
 .info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
 .info-grid article { min-height: 260px; padding: 2rem; border-radius: 26px; background: var(--foam); }
 .info-grid article:nth-child(2) { background: var(--sand); }
@@ -131,14 +143,16 @@ footer a { color: white; }
   .decision-note { grid-template-columns: 1fr; gap: .6rem; }
   .day-grid { grid-template-columns: 1fr; }
   .day-aside { border-top: 1px solid var(--line); border-left: 0; }
+  .alternative-grid { grid-template-columns: 1fr; }
   .info-grid, .budget-grid { grid-template-columns: 1fr 1fr; }
   .food-intro { position: static; }
   .ready-section { padding-right: 2rem; padding-left: 2rem; }
 }
 
 @media (max-width: 560px) {
-  .site-header { padding-inline: 1rem; }
-  .brand > span:last-child { display: none; }
+  .site-header { min-height: 48px; padding: .35rem 1rem; }
+  .site-header nav { display: none; }
+  .hero { min-height: calc(100vh - 48px); }
   .hero-content { width: 88vw; padding-bottom: 5rem; }
   .hero h1 { max-width: 10em; font-size: clamp(2.65rem, 12.5vw, 3.15rem); line-height: 1.08; letter-spacing: -.06em; }
   .hero-copy { font-size: .96rem; line-height: 1.75; }
