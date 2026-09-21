@@ -23,13 +23,13 @@ vacation/
 │   │   ├── style.css
 │   │   ├── data.js
 │   │   ├── main.js
-│   │   └── images/
+│   │   └── assets/images/        # 江南计划自己的图片
 │   └── yunnan-2026/              # 云南计划独立子站
 │       ├── index.html
 │       ├── data.js
 │       ├── app.js
 │       ├── 其他页面模块
-│       └── images/
+│       └── assets/images/        # 云南计划自己的图片
 └── .github/workflows/pages.yml   # 内容扫描与 GitHub Pages 部署
 ```
 
@@ -66,7 +66,7 @@ https://<user>.github.io/vacation/
 ## 新增旅行计划
 
 1. 在 `trips/` 下创建一个语义清晰且稳定的目录，例如 `trips/japan-2027/`。
-2. 在该目录中放置可独立运行的 `index.html`、样式、脚本、数据和图片。
+2. 在该目录中放置可独立运行的 `index.html`、样式、脚本和数据；该计划的图片放在自己的 `assets/images/` 下。
 3. 在子页面显眼位置加入指向 `../../` 的“返回总站”链接。
 4. 在 `assets/trips.js` 的 `trips` 数组中添加总站卡片元数据，并将 `page` 设置为 `./trips/japan-2027/`。
 5. 如需支持旧式查询参数链接，在 `trip.html` 的 `pages` 映射中添加相同 ID。

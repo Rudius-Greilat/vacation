@@ -7,7 +7,7 @@ const routeStops = [
 
 const days = [
   {
-    date: '10.01', week: '周四', city: '南昌 → 昆明', label: '落地就休息', theme: 'bg-[#E8D4BE]', image: './images/6bb84b297ae78632.jpg',
+    date: '10.01', week: '周四', city: '南昌 → 昆明', label: '落地就休息', theme: 'bg-[#E8D4BE]', image: './assets/images/6bb84b297ae78632.jpg',
     summary: '今晚没有任务，安全抵达就是今天最好的完成。',
     schedule: [
       { time: '晚间', title: '从南昌出发', desc: '提前到达机场，办理值机后找个安静的位置休息。', icon: 'ri-flight-takeoff-line' },
@@ -17,7 +17,7 @@ const days = [
     food: ['便利店补给', '清淡宵夜'], stay: '翠湖 / 东风广场 / 昆明老街附近', energy: 20, note: '预留40—60分钟用于取行李和叫车。'
   },
   {
-    date: '10.02', week: '周五', city: '昆明', label: '翠湖慢生活', theme: 'bg-[#DCE9D4]', image: './images/bb6f3c6522f271d9.jpg',
+    date: '10.02', week: '周五', city: '昆明', label: '翠湖慢生活', theme: 'bg-[#DCE9D4]', image: './assets/images/bb6f3c6522f271d9.jpg',
     summary: '从一碗米线开始，在翠湖边把脚步慢下来。',
     schedule: [
       { time: '09:30', title: '睡醒再出门', desc: '找一家附近的米线店，慢慢吃早餐。', icon: 'ri-bowl-line' },
@@ -28,7 +28,7 @@ const days = [
     food: ['过桥米线', '野生菌火锅', '鲜花饼'], stay: '昆明原酒店', energy: 45, note: '所有景点都在市区，累了随时打车回酒店。'
   },
   {
-    date: '10.03', week: '周六', city: '昆明', label: '滇池吹风', theme: 'bg-[#D9E6ED]', image: './images/0c5d8a61d10321f1.jpg',
+    date: '10.03', week: '周六', city: '昆明', label: '滇池吹风', theme: 'bg-[#D9E6ED]', image: './assets/images/0c5d8a61d10321f1.jpg',
     summary: '把大半天交给滇池，日落前不必有明确目的地。',
     schedule: [
       { time: '09:30', title: '悠闲早餐', desc: '避开早高峰后再前往海埂公园。', icon: 'ri-sun-line' },
@@ -39,7 +39,7 @@ const days = [
     food: ['汽锅鸡', '云南烧豆腐', '手冲咖啡'], stay: '昆明原酒店', energy: 40, note: '10月通常不是红嘴鸥旺季，不专门追海鸥。'
   },
   {
-    date: '10.04', week: '周日', city: '昆明 → 丽江', label: '坐着看风景', theme: 'bg-[#EADFCF]', image: './images/22f399cd550f5012.jpg',
+    date: '10.04', week: '周日', city: '昆明 → 丽江', label: '坐着看风景', theme: 'bg-[#EADFCF]', image: './assets/images/22f399cd550f5012.jpg',
     summary: '换城日只做一件事：舒服地抵达丽江。',
     schedule: [
       { time: '08:00', title: '早餐与退房', desc: '不用赶最早班，给早餐和交通留足时间。', icon: 'ri-suitcase-line' },
@@ -50,7 +50,7 @@ const days = [
     food: ['纳西烤肉', '腊排骨', '鸡豆凉粉'], stay: '丽江古城北门 / 南门外围', energy: 35, note: '第一晚少饮酒、多喝水，让身体适应约2400米海拔。'
   },
   {
-    date: '10.05', week: '周一', city: '丽江', label: '雪山与蓝湖', theme: 'bg-[#D6E3EA]', image: './images/8c4542e69e249b99.jpg',
+    date: '10.05', week: '周一', city: '丽江', label: '雪山与蓝湖', theme: 'bg-[#D6E3EA]', image: './assets/images/8c4542e69e249b99.jpg',
     summary: '今天是风景高光，但路线依然选择体力友好版。',
     schedule: [
       { time: '07:00', title: '出发去雪山', desc: '早餐吃饱，携带保暖外套、防晒和水。', icon: 'ri-bus-line' },
@@ -61,7 +61,7 @@ const days = [
     food: ['牦牛肉火锅', '热姜茶', '青稞饼'], stay: '丽江原酒店', energy: 65, note: '若明显头痛、恶心或胸闷，停止上升并及时下撤。'
   },
   {
-    date: '10.06', week: '周二', city: '丽江 → 长沙', label: '古镇发呆', theme: 'bg-[#E5DEEC]', image: './images/9d55ed90cbd7c2ff.jpg',
+    date: '10.06', week: '周二', city: '丽江 → 长沙', label: '古镇发呆', theme: 'bg-[#E5DEEC]', image: './assets/images/9d55ed90cbd7c2ff.jpg',
     summary: '离开前再看一次雪山，把白天留给安静的白沙。',
     schedule: [
       { time: '09:30', title: '退房寄存', desc: '轻装前往白沙古镇，找得到雪山的街角。', icon: 'ri-luggage-deposit-line' },
@@ -72,7 +72,7 @@ const days = [
     food: ['白沙馒头', '纳西家常菜', '机场简餐'], stay: '长沙五一广场 / 芙蓉广场', energy: 45, note: '束河古镇只是备选，不为了多去一个地方而赶路。'
   },
   {
-    date: '10.07', week: '周三', city: '长沙 → 九江', label: '一碗粉再回家', theme: 'bg-[#F0DCC7]', image: './images/7f4e5232b2a9ea92.jpg',
+    date: '10.07', week: '周三', city: '长沙 → 九江', label: '一碗粉再回家', theme: 'bg-[#F0DCC7]', image: './assets/images/7f4e5232b2a9ea92.jpg',
     summary: '用半天尝尝长沙，把返程也当作旅行的一部分。',
     schedule: [
       { time: '09:00', title: '长沙米粉早餐', desc: '睡够再出门，选择酒店附近的老店。', icon: 'ri-restaurant-line' },

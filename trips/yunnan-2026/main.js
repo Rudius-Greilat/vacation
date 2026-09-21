@@ -172,9 +172,9 @@ function makeOverviewInteractive() {
 
 function startSceneRotation() {
   const sceneImages = [
-    './images/bb6f3c6522f271d9.jpg',
-    './images/0c5d8a61d10321f1.jpg',
-    './images/a5f34d4ffa83dbf5.jpg'
+    './assets/images/bb6f3c6522f271d9.jpg',
+    './assets/images/0c5d8a61d10321f1.jpg',
+    './assets/images/a5f34d4ffa83dbf5.jpg'
   ];
   let sceneIndex = 0;
   setInterval(() => {

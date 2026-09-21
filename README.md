@@ -24,9 +24,10 @@ python3 -m http.server 8000
 ## 添加旅行计划
 
 1. 在 `trips/` 中加入完整的独立静态网页目录，页面可以使用自己的样式和交互。
-2. 在 `assets/trips.js` 的 `trips` 数组中增加首页卡片信息。
-3. 将 `page` 指向该页面目录，例如 `./trips/example/`。
-4. 确保图片可公开使用，并将内部资源转换为仓库内的本地文件。
+2. 将该计划的图片放在自己的 `assets/images/` 目录中，不与其他计划混放。
+3. 在 `assets/trips.js` 的 `trips` 数组中增加首页卡片信息。
+4. 将 `page` 指向该页面目录，例如 `./trips/example/`。
+5. 确保图片可公开使用，并将内部资源转换为仓库内的本地文件。
 
 ## GitHub Pages
 

@@ -1,16 +1,16 @@
 // 行程数据模块
 
 export const IMG = {
-  banner: "./images/607a58a2ac865ad8.jpg",
-  yuantouzhu: "./images/67da2155062391c3.jpg",
-  nanchangjie: "./images/fa37c3f50412d8ec.jpg",
-  huishan: "./images/a128054148d33870.jpg",
-  zhuozheng: "./images/eab16cb996024cd4.jpg",
-  pingjiang: "./images/a804117ffd3ea75a.jpg",
-  huqiu: "./images/8485029a3e2a1955.jpg",
-  waitan: "./images/61e8939c4cfbb587.jpg",
-  yuyuan: "./images/b1d1105e10227860.jpg",
-  tianzifang: "./images/4bfa2f83037add2d.jpg"
+  banner: "./assets/images/607a58a2ac865ad8.jpg",
+  yuantouzhu: "./assets/images/67da2155062391c3.jpg",
+  nanchangjie: "./assets/images/fa37c3f50412d8ec.jpg",
+  huishan: "./assets/images/a128054148d33870.jpg",
+  zhuozheng: "./assets/images/eab16cb996024cd4.jpg",
+  pingjiang: "./assets/images/a804117ffd3ea75a.jpg",
+  huqiu: "./assets/images/8485029a3e2a1955.jpg",
+  waitan: "./assets/images/61e8939c4cfbb587.jpg",
+  yuyuan: "./assets/images/b1d1105e10227860.jpg",
+  tianzifang: "./assets/images/4bfa2f83037add2d.jpg"
 };
 
 // 城市总览卡片
