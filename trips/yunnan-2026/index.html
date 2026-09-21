@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="南昌出发，经昆明、丽江、长沙返回九江的国庆松弛旅行计划">
+  <title>一路向西 · 国庆松弛旅行计划</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { ink: '#18332D', sage: '#DDE8D5', moss: '#5B7355', sand: '#F4EEE3', sun: '#E9A86B' },
+          fontFamily: { sans: ['Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', 'sans-serif'], serif: ['Noto Serif SC', 'STSong', 'serif'] },
+          boxShadow: { soft: '0 18px 50px rgba(31, 58, 49, 0.10)' }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-[#F8F6F0] text-ink antialiased selection:bg-sun/30">
+  <header class="sticky top-0 z-40 border-b border-ink/5 bg-[#F8F6F0]/90 backdrop-blur-xl">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 lg:px-8" aria-label="主导航">
+      <a href="#home" class="flex items-center gap-2 font-serif text-lg font-bold"><span class="grid h-9 w-9 place-items-center rounded-full bg-ink text-sand"><i class="ri-compass-3-line"></i></span>一路向西</a>
+      <div class="hidden items-center gap-6 text-sm font-medium lg:flex">
+        <a class="transition hover:text-sun" href="#route">路线</a>
+        <a class="transition hover:text-sun" href="#plan">日程</a>
+        <a class="transition hover:text-sun" href="#attractions">景点</a>
+        <a class="transition hover:text-sun" href="#transport">交通</a>
+        <a class="transition hover:text-sun" href="#stay">住宿</a>
+        <a class="transition hover:text-sun" href="#food">美食</a>
+        <a class="transition hover:text-sun" href="#tips">准备</a>
+      </div>
+      <button id="open-overview" class="rounded-full bg-ink px-4 py-2 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-moss"><i class="ri-route-line mr-1"></i>总览</button>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="mx-auto max-w-7xl px-5 pb-12 pt-6 lg:px-8 lg:pt-10">
+      <div class="relative min-h-[620px] overflow-hidden rounded-[2rem] bg-ink shadow-soft lg:min-h-[650px]">
+        <img src="./images/c8f2d898dd3d8988.jpg" alt="丽江玉龙雪山与蓝月谷" class="absolute inset-0 h-full w-full object-cover opacity-55">
+        <div class="absolute inset-0 bg-gradient-to-r from-ink via-ink/75 to-transparent"></div>
+        <div class="relative flex min-h-[620px] max-w-3xl flex-col justify-between p-7 text-white sm:p-12 lg:min-h-[650px] lg:p-16">
+          <div class="flex flex-wrap gap-2"><span class="rounded-full border border-white/25 bg-white/10 px-4 py-2 text-sm backdrop-blur">2026.10.01—10.07</span><span class="rounded-full border border-white/25 bg-white/10 px-4 py-2 text-sm backdrop-blur">7天6晚</span><span class="rounded-full border border-white/25 bg-white/10 px-4 py-2 text-sm backdrop-blur">松弛度 90%</span></div>
+          <div>
+            <p class="mb-4 text-sm font-semibold tracking-[0.35em] text-sage">NANCHANG · KUNMING · LIJIANG · CHANGSHA</p>
+            <h1 class="font-serif text-5xl font-bold leading-tight sm:text-6xl lg:text-7xl">慢一点，<br>去遇见云南的秋。</h1>
+            <p class="mt-6 max-w-xl text-base leading-8 text-white/80 sm:text-lg">从南昌出发，沿着滇池晚风去往雪山脚下，再带一碗长沙米粉回到九江。每天只安排一件重要的事，其余时间留给散步和发呆。</p>
+            <div class="mt-8 flex flex-wrap gap-3"><a href="#plan" class="rounded-full bg-sun px-6 py-3 font-semibold text-ink transition hover:-translate-y-0.5 hover:bg-[#F1BB86]">查看每日计划 <i class="ri-arrow-down-line ml-1"></i></a><button id="random-moment" class="rounded-full border border-white/30 bg-white/10 px-6 py-3 font-semibold backdrop-blur transition hover:bg-white/20">今天松弛一下</button></div>
+          </div>
+          <div class="grid grid-cols-3 gap-3 border-t border-white/15 pt-6 text-sm"><div><p class="text-white/55">跨越城市</p><p class="mt-1 text-xl font-semibold">4 座</p></div><div><p class="text-white/55">核心景点</p><p class="mt-1 text-xl font-semibold">12 处</p></div><div><p class="text-white/55">备选方案</p><p class="mt-1 text-xl font-semibold">随时换</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="route" class="mx-auto max-w-7xl px-5 py-12 lg:px-8">
+      <div class="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end"><div><p class="text-sm font-bold tracking-[0.25em] text-moss">THE ROUTE</p><h2 class="mt-2 font-serif text-3xl font-bold sm:text-4xl">一条不赶路的路线</h2></div><p class="max-w-lg text-sm leading-7 text-ink/60">飞行解决长距离，动车衔接昆明与丽江。每次换城都留足缓冲，不安排落地即打卡。</p></div>
+      <div id="route-cards" class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4"></div>
+    </section>
+
+    <section id="plan" class="bg-sage/40 py-16">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="mb-8"><p class="text-sm font-bold tracking-[0.25em] text-moss">DAILY PLAN</p><h2 class="mt-2 font-serif text-3xl font-bold sm:text-4xl">你的七日慢游手册</h2></div>
+        <div id="date-tabs" class="mb-8 flex gap-2 overflow-x-auto pb-2" role="tablist"></div>
+        <div id="day-detail" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section id="attractions" class="mx-auto max-w-7xl px-5 py-16 lg:px-8">
+      <div class="flex flex-col justify-between gap-5 lg:flex-row lg:items-end"><div><p class="text-sm font-bold tracking-[0.25em] text-moss">PLACES IN DETAIL</p><h2 class="mt-2 font-serif text-3xl font-bold sm:text-4xl">景点不只打卡，也要知道怎么玩</h2><p class="mt-3 max-w-2xl text-sm leading-7 text-ink/55">主线保证体验完整，弹性和备选景点只在天气、体力和预约情况合适时加入。点击卡片底部查看交通与预约。</p></div><div id="attraction-filters" class="flex gap-2 overflow-x-auto pb-1"></div></div>
+      <div id="attraction-grid" class="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3"></div>
+    </section>
+
+    <section id="transport" class="bg-ink py-16 text-white">
+      <div class="mx-auto grid max-w-7xl gap-10 px-5 lg:grid-cols-[0.75fr_1.25fr] lg:px-8">
+        <div class="lg:sticky lg:top-24 lg:self-start"><p class="text-sm font-bold tracking-[0.25em] text-sage">POINT TO POINT</p><h2 class="mt-2 font-serif text-3xl font-bold sm:text-4xl">景点之间，怎么走最省心</h2><p class="mt-5 text-sm leading-7 text-white/55">市中心短途步行，跨片区地铁优先；丽江带行李或赶飞机时直接打车。国庆所有预计时间都额外留出20—30分钟。</p><div class="mt-7 rounded-3xl bg-white/10 p-5 text-sm leading-7"><i class="ri-information-line mr-2 text-sun"></i>公交线路、票价和末班时间可能临时调整，出发当天用地图软件再次导航确认。</div></div>
+        <div id="transport-list" class="rounded-[2rem] bg-[#F8F6F0] p-6 text-ink sm:p-8"></div>
+      </div>
+    </section>
+
+    <section id="booking" class="mx-auto max-w-7xl px-5 py-16 lg:px-8">
+      <div class="mb-8"><p class="text-sm font-bold tracking-[0.25em] text-moss">RESERVATION</p><h2 class="mt-2 font-serif text-3xl font-bold sm:text-4xl">哪些要约，什么时候准备</h2><p class="mt-3 max-w-3xl text-sm leading-7 text-ink/55">票务政策会调整，尤其是国庆。以下以当前公开信息形成准备顺序，实际操作前必须再查看景区官方公众号或小程序公告。</p></div>
+      <div id="booking-grid" class="grid gap-4 md:grid-cols-2 xl:grid-cols-3"></div>
+    </section>
+
+    <section id="stay" class="bg-sage/40 py-16">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="mb-8"><p class="text-sm font-bold tracking-[0.25em] text-moss">WHERE TO STAY</p><h2 class="mt-2 font-serif text-3xl font-bold sm:text-4xl">昆明与长沙，住在哪最顺路</h2><p class="mt-3 max-w-3xl text-sm leading-7 text-ink/55">推荐以区域逻辑为主、酒店名称为当前可选参考。国庆价格波动大，优先选择可免费取消、近地铁、24小时前台的房型。</p></div>
+        <div id="hotel-grid" class="grid gap-5 lg:grid-cols-2"></div>
+      </div>
+    </section>
+
+    <section id="food" class="mx-auto max-w-7xl px-5 py-16 lg:px-8">
+      <div class="flex flex-col justify-between gap-5 md:flex-row md:items-end"><div><p class="text-sm font-bold tracking-[0.25em] text-moss">LOCAL FLAVORS</p><h2 class="mt-2 font-serif text-3xl font-bold sm:text-4xl">一路慢慢吃，才是旅行正事</h2><p class="mt-3 max-w-2xl text-sm leading-7 text-ink/55">不用一天塞满所有名店。昆明吃山野鲜味，丽江吃纳西暖锅，长沙用一碗粉和几样小吃收尾。</p></div><div id="food-filters" class="flex gap-2"></div></div>
+      <div id="food-grid" class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4"></div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-5 pb-16 lg:px-8">
+      <div class="grid overflow-hidden rounded-[2rem] bg-ink text-white shadow-soft lg:grid-cols-2">
+        <img id="scene-image" src="./images/bb6f3c6522f271d9.jpg" alt="昆明翠湖风景" class="h-80 w-full object-cover transition-opacity duration-300 lg:h-full">
+        <div class="p-8 sm:p-12"><span class="inline-flex rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-sage">松弛旅行守则</span><h2 class="mt-5 font-serif text-3xl font-bold">不追求全部看见，<br>只认真感受当下。</h2><div id="slow-rules" class="mt-8 space-y-4"></div></div>
+      </div>
+    </section>
+
+    <section id="tips" class="mx-auto max-w-7xl px-5 pb-16 lg:px-8">
+      <div class="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end"><div><p class="text-sm font-bold tracking-[0.25em] text-moss">BEFORE YOU GO</p><h2 class="mt-2 font-serif text-3xl font-bold sm:text-4xl">出发前，轻轻确认</h2></div><div class="rounded-full bg-white px-4 py-2 text-sm shadow-sm"><span id="check-progress" class="font-bold text-moss">0/8</span> 已准备</div></div>
+      <div id="checklist" class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4"></div>
+      <div class="mt-8 grid gap-4 lg:grid-cols-3"><article class="rounded-3xl bg-[#F0DCC7] p-6"><i class="ri-train-line text-3xl"></i><h3 class="mt-4 text-lg font-bold">交通优先级</h3><p class="mt-2 text-sm leading-7 text-ink/65">先锁定昆明至丽江动车，再确认长沙至九江返程。国庆以12306实际车次为准。</p></article><article class="rounded-3xl bg-[#D9E6ED] p-6"><i class="ri-snowflake-line text-3xl"></i><h3 class="mt-4 text-lg font-bold">雪山不过度</h3><p class="mt-2 text-sm leading-7 text-ink/65">云杉坪与蓝月谷已经足够漂亮。身体不适就下撤，不必执着于最高海拔。</p></article><article class="rounded-3xl bg-[#E5DEEC] p-6"><i class="ri-hotel-bed-line text-3xl"></i><h3 class="mt-4 text-lg font-bold">住得省力</h3><p class="mt-2 text-sm leading-7 text-ink/65">丽江选古城外围临近车行道的酒店，避免在石板路上拖着行李走太久。</p></article></div>
+    </section>
+  </main>
+
+  <footer class="border-t border-ink/10 bg-white/50 px-5 py-8 text-center text-sm text-ink/55"><p>愿这趟旅程有风、有光，也有随时停下来的自由。</p><p class="mt-2 text-xs">景区开放、交通班次、票价与酒店营业情况可能调整，请在出发前以官方渠道为准。</p></footer>
+
+  <div id="toast" class="pointer-events-none fixed bottom-6 left-1/2 z-50 -translate-x-1/2 translate-y-8 rounded-full bg-ink px-5 py-3 text-sm font-medium text-white opacity-0 shadow-xl transition-all duration-300" role="status"></div>
+  <div id="overview-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-ink/60 p-4 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="overview-title"><div class="max-h-[88vh] w-full max-w-2xl overflow-y-auto rounded-[2rem] bg-[#F8F6F0] p-6 shadow-2xl sm:p-8"><div class="flex items-start justify-between gap-4"><div><p class="text-xs font-bold tracking-[0.2em] text-moss">TRIP OVERVIEW</p><h2 id="overview-title" class="mt-2 font-serif text-2xl font-bold">7天6晚 · 行程总览</h2></div><button id="close-overview" class="grid h-10 w-10 place-items-center rounded-full bg-white text-xl transition hover:bg-sage" aria-label="关闭"><i class="ri-close-line"></i></button></div><div id="overview-list" class="mt-7 space-y-3"></div></div></div>
+  <script src="./data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

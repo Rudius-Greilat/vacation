@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>江南六日游 · 武汉→无锡→苏州→上海</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#2b3a36',
+            jade: '#3f7c6e',
+            jadeDark: '#2c5a4f',
+            cream: '#f6f1e7',
+            sand: '#efe6d4',
+            clay: '#c46a4a',
+            gold: '#c79a3a'
+          },
+          fontFamily: {
+            serif: ['"Noto Serif SC"', 'serif'],
+            sans: ['"Noto Sans SC"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-cream font-sans text-ink">
+
+  <!-- 顶部导航 -->
+  <header class="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-cream/85 border-b border-jade/15 transition-all" id="navbar">
+    <nav class="max-w-7xl mx-auto px-5 py-3 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-2 font-serif font-black text-xl text-jadeDark">
+        <span class="text-2xl">🏯</span> 江南六日
+      </a>
+      <ul class="hidden md:flex items-center gap-7 text-sm font-medium text-ink/70">
+        <li><a class="nav-link" href="#overview">行程总览</a></li>
+        <li><a class="nav-link" href="#timeline">每日详情</a></li>
+        <li><a class="nav-link" href="#hotel">酒店推荐</a></li>
+        <li><a class="nav-link" href="#food">美食地图</a></li>
+        <li><a class="nav-link" href="#tips">实用贴士</a></li>
+        <li><a class="nav-link" href="#budget">预算参考</a></li>
+      </ul>
+      <a href="#timeline" class="bg-jade hover:bg-jadeDark text-white text-sm px-4 py-2 rounded-full transition shadow-sm">开始规划</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="top" class="relative h-[92vh] min-h-[560px] flex items-center justify-center overflow-hidden">
+    <img src="./images/607a58a2ac865ad8.jpg" alt="江南水乡" class="absolute inset-0 w-full h-full object-cover scale-105" />
+    <div class="absolute inset-0 bg-gradient-to-b from-jadeDark/55 via-ink/40 to-ink/70"></div>
+    <div class="relative text-center text-cream px-6 max-w-3xl" data-reveal>
+      <p class="tracking-[0.5em] text-sm md:text-base text-gold mb-4">2026 · 烟雨江南</p>
+      <h1 class="font-serif font-black text-4xl md:text-6xl leading-tight drop-shadow-lg">武汉 · 无锡 · 苏州 · 上海</h1>
+      <p class="mt-5 text-base md:text-lg text-cream/90">6月16日 → 6月22日 · 一场宽松惬意的七日江南之行</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-3 text-sm">
+        <span class="px-4 py-1.5 rounded-full bg-white/15 border border-white/25">🚄 高铁串联</span>
+        <span class="px-4 py-1.5 rounded-full bg-white/15 border border-white/25">🏞️ 园林太湖</span>
+        <span class="px-4 py-1.5 rounded-full bg-white/15 border border-white/25">🍜 江南风味</span>
+        <span class="px-4 py-1.5 rounded-full bg-white/15 border border-white/25">🌃 都市夜景</span>
+      </div>
+    </div>
+    <a href="#overview" class="absolute bottom-8 left-1/2 -translate-x-1/2 text-cream/80 text-2xl">↓</a>
+  </section>
+
+  <!-- 行程总览 -->
+  <section id="overview" class="max-w-7xl mx-auto px-5 py-20">
+    <div class="text-center mb-12" data-reveal>
+      <h2 class="section-title">行程总览</h2>
+      <p class="section-sub">7 天 6 晚 · 三城慢游 · 节奏宽松不赶路</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6 mb-12" id="routeCards"></div>
+    <div class="bg-white rounded-2xl shadow-sm border border-jade/10 p-6 md:p-8" data-reveal>
+      <h3 class="font-serif font-bold text-xl text-jadeDark mb-6 flex items-center gap-2">🚄 交通主线</h3>
+      <div class="flex flex-wrap items-center gap-3 text-sm" id="routeLine"></div>
+    </div>
+  </section>
+
+  <!-- 每日详情 -->
+  <section id="timeline" class="bg-sand/40 py-20">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="text-center mb-14" data-reveal>
+        <h2 class="section-title">每日详情</h2>
+        <p class="section-sub">住 · 行 · 游 · 食，逐日拆解</p>
+      </div>
+      <div class="relative" id="timeline-list"></div>
+    </div>
+  </section>
+
+  <!-- 酒店推荐 -->
+  <section id="hotel" class="max-w-7xl mx-auto px-5 py-20">
+    <div class="text-center mb-12" data-reveal>
+      <h2 class="section-title">性价比酒店推荐</h2>
+      <p class="section-sub">每城精选 3 档 · 位置优先 · 逛吃通勤都方便</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6" id="hotelGrid"></div>
+    <p class="text-center text-ink/50 text-xs mt-6">* 价格为平日参考区间，周末及旺季会上浮，建议提前在平台比价预订。</p>
+  </section>
+
+  <!-- 美食地图 -->
+  <section id="food" class="max-w-7xl mx-auto px-5 py-20">
+    <div class="text-center mb-12" data-reveal>
+      <h2 class="section-title">美食地图</h2>
+      <p class="section-sub">每座城市的必尝风味</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="foodGrid"></div>
+  </section>
+
+  <!-- 实用贴士 -->
+  <section id="tips" class="bg-jadeDark text-cream py-20">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="text-center mb-12" data-reveal>
+        <h2 class="font-serif font-black text-3xl md:text-4xl text-white">实用贴士</h2>
+        <p class="text-cream/70 mt-3">出行前看一眼，旅途更省心</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6" id="tipsGrid"></div>
+    </div>
+  </section>
+
+  <!-- 预算参考 -->
+  <section id="budget" class="max-w-5xl mx-auto px-5 py-20">
+    <div class="text-center mb-12" data-reveal>
+      <h2 class="section-title">预算参考</h2>
+      <p class="section-sub">单人 7 天 6 晚 · 中等舒适标准（仅供参考）</p>
+    </div>
+    <div class="bg-white rounded-2xl shadow-sm border border-jade/10 overflow-hidden" data-reveal>
+      <table class="w-full text-sm">
+        <thead class="bg-jade text-white">
+          <tr><th class="py-4 px-5 text-left">项目</th><th class="py-4 px-5 text-left">说明</th><th class="py-4 px-5 text-right">预估（元）</th></tr>
+        </thead>
+        <tbody id="budgetBody"></tbody>
+        <tfoot class="bg-sand/60 font-bold text-jadeDark">
+          <tr><td class="py-4 px-5" colspan="2">合计（单人）</td><td class="py-4 px-5 text-right text-lg" id="budgetTotal">—</td></tr>
+        </tfoot>
+      </table>
+    </div>
+    <p class="text-center text-ink/50 text-xs mt-4">* 以上为中等标准估算，实际花费随季节、住宿档次和个人消费习惯浮动。</p>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="bg-ink text-cream/80 py-10 text-center text-sm">
+    <p class="font-serif text-lg text-cream mb-2">愿你的江南之行，烟雨皆诗 🌿</p>
+    <p>武汉 · 无锡 · 苏州 · 上海 · 2026.06.16 – 06.22</p>
+    
+  </footer>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>

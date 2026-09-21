@@ -26,7 +26,7 @@ jobs:
       - name: Scan public files
         shell: bash
         run: |
-          if grep -RInE 'woa\.com|with\.tencent\.com|tencentcos\.cn|BEGIN (RSA |EC |OPENSSH )?PRIVATE KEY|api[_-]?key[[:space:]]*[:=]|access[_-]?token[[:space:]]*[:=]' --include='*.html' --include='*.css' --include='*.js' --include='*.json' assets index.html trip.html; then
+          if grep -RInE 'woa\.com|with\.tencent\.com|tencentcos\.cn|BEGIN (RSA |EC |OPENSSH )?PRIVATE KEY|api[_-]?key[[:space:]]*[:=]|access[_-]?token[[:space:]]*[:=]' --include='*.html' --include='*.css' --include='*.js' --include='*.json' assets trips index.html; then
             echo 'Potential internal or sensitive content found.'
             exit 1
           fi

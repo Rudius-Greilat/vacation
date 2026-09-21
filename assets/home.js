@@ -33,7 +33,7 @@ function renderTimeline() {
         <span>${String(index + 1).padStart(2, '0')}</span>
         <time datetime="${trip.startDate}">${formatRange(trip)}</time>
       </div>
-      <a class="trip-card" href="./trip.html?id=${trip.id}" aria-label="查看${trip.title}旅行计划">
+      <a class="trip-card" href="${trip.page}" aria-label="查看${trip.title}旅行计划">
         <div class="trip-cover">
           <img src="${trip.cover}" alt="${trip.title}封面" width="1536" height="1024">
           <span class="trip-mood">${trip.mood}</span>

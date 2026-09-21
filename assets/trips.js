@@ -12,6 +12,7 @@ export const trips = [
     mood: '水巷慢游',
     palette: 'jade',
     cover: './assets/images/jiangnan-cover.png',
+    page: './trips/jiangnan-2026/',
     overview: '从太湖到园林，再沿黄浦江看城市亮起。城际距离短，适合把更多时间留给散步、吃饭与临时起意。',
     highlights: ['鼋头渚看太湖', '平江路听评弹', '梧桐街区散步', '外滩看夜景'],
     transport: [
@@ -117,6 +118,7 @@ export const trips = [
     mood: '国庆松弛游',
     palette: 'sky',
     cover: './assets/images/yunnan-cover.png',
+    page: './trips/yunnan-2026/',
     overview: '从昆明的湖风出发，到丽江雪山脚下慢慢走，再用长沙的一碗米粉收尾。每天只安排一件重要的事。',
     highlights: ['翠湖边散步', '滇池看日落', '云杉坪看雪山', '白沙古镇发呆'],
     transport: [
