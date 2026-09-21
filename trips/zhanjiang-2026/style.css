@@ -20,8 +20,9 @@ a { color: inherit; }
 .skip-link { position: fixed; left: 1rem; top: -5rem; z-index: 100; padding: .8rem 1rem; border-radius: 999px; background: white; }
 .skip-link:focus { top: 1rem; }
 .site-header { position: sticky; top: 0; z-index: 40; display: flex; width: 100%; max-width: none; min-height: 52px; margin: 0; padding: .45rem max(4vw, 1.25rem); align-items: center; justify-content: space-between; gap: 1.5rem; border-bottom: 1px solid rgba(255,255,255,.1); color: white; background: rgba(5,47,61,.94); backdrop-filter: blur(18px); }
-.site-header nav { display: flex; gap: 1.5rem; }
-.site-header nav a, .back-link { color: rgba(255,255,255,.76); text-decoration: none; font-size: .82rem; }
+.site-header nav { display: flex; min-width: 0; justify-content: flex-end; gap: 1.5rem; overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+.site-header nav::-webkit-scrollbar { display: none; }
+.site-header nav a, .back-link { flex: 0 0 auto; color: rgba(255,255,255,.76); text-decoration: none; font-size: .82rem; white-space: nowrap; }
 .site-header a:hover { color: white; }
 .back-link { display: inline-flex; margin: 0; padding: .42rem .75rem; align-items: center; gap: .45rem; border: 1px solid rgba(255,255,255,.2); border-radius: 999px; white-space: nowrap; }
 
@@ -154,7 +155,9 @@ footer p { margin: 0; }
 footer a { color: white; }
 
 @media (max-width: 860px) {
-  .site-header nav { display: none; }
+  .site-header { padding-right: 0; gap: .75rem; }
+  .site-header nav { justify-content: flex-start; gap: .35rem; padding-right: 1rem; }
+  .site-header nav a { padding: .45rem .7rem; border-radius: 999px; background: rgba(255,255,255,.08); }
   .hero { min-height: 760px; }
   .hero-shade { background: linear-gradient(0deg, rgba(2,35,46,.9) 10%, rgba(2,35,46,.3) 90%); }
   .section { padding: 5rem 0; }
@@ -176,9 +179,12 @@ footer a { color: white; }
 }
 
 @media (max-width: 560px) {
-  .site-header { min-height: 48px; padding: .35rem 1rem; }
-  .site-header nav { display: none; }
-  .hero { min-height: calc(100vh - 48px); }
+  .site-header { min-height: 50px; padding: .35rem 0 .35rem .65rem; gap: .45rem; }
+  .back-link { padding: .4rem .58rem; font-size: .74rem; }
+  .back-link span { display: none; }
+  .site-header nav { padding-right: .65rem; }
+  .site-header nav a { padding: .4rem .62rem; font-size: .74rem; }
+  .hero { min-height: calc(100vh - 50px); }
   .hero-content { width: 88vw; padding-bottom: 5rem; }
   .hero h1 { max-width: 10em; font-size: clamp(2.65rem, 12.5vw, 3.15rem); line-height: 1.08; letter-spacing: -.06em; }
   .hero-copy { font-size: .96rem; line-height: 1.75; }
